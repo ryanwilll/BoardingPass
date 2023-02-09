@@ -1,7 +1,8 @@
 body{
     background: rgb(130,87,229);
-    background: linear-gradient(90deg, rgba(130,87,229,1) 0%, rgba(39,26,69,1) 100%);
+    background: linear-gradient(175deg, rgba(130,87,229,1) 0%, rgba(39,26,69,1) 100%);
     height: 100vh;
+
 }
 
 main{
@@ -49,33 +50,47 @@ main{
     text-align: right;
 }
 
+
 /* ================================================================= */
 .card-content{
     position: absolute;
     display: flex;
     width: 330px;
-    height: 650px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .ticket {
-    background: #FFFFFF;
     border-radius: 24px;
-    padding: 1.5rem;
+    
 }
 
 .title{
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .info-voo{
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding: 1.7rem;
+    border-radius: 24px 24px 0 0;
+    background: #fff;
+    background: linear-gradient(0, transparent 0, transparent) top left, 
+                linear-gradient(0, transparent 0, transparent) top right, 
+                linear-gradient(0, transparent 0, transparent) bottom left, 
+                linear-gradient(0, transparent 0, transparent) bottom right;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    background-image:   radial-gradient(circle at 0 0, white .9rem, white .9rem), 
+                        radial-gradient(circle at 100% 0, white .9rem, white .9rem), 
+                        radial-gradient(circle at 0 100%, transparent .8rem, white .9rem), 
+                        radial-gradient(circle at 100% 100%, transparent .8rem, white .9rem);
 }
 
 .voo-data{
@@ -90,27 +105,75 @@ main{
 .origem-destino{
     margin: 0;
     padding: 0;
-    border-bottom: 1px dashed #808080;
-    margin: 1.5rem 0;
     display: flex;
-    padding-bottom: 1.5rem;
+}
+
+.origem-destino .origem, .origem-destino .destino{
+    padding-top: 1.5rem;
+}
+
+.origem-destino img{
+    margin-top: 1rem;
 }
 
 .info-passageiro{
     display: flex;
+    position: relative;
     justify-content: space-between;
-    border-bottom: 1px dashed #808080;
-    padding: 0 0 1rem 0;
+    position: relative;
+    padding: 1.7rem;
+    background: #fff;
+    background: linear-gradient(0, transparent 0, transparent) top left, 
+                linear-gradient(0, transparent 0, transparent) top right, 
+                linear-gradient(0, transparent 0, transparent) bottom left, 
+                linear-gradient(0, transparent 0, transparent) bottom right;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    background-image:   radial-gradient( circle at 0 0, transparent .8rem, white .9rem ), 
+                        radial-gradient(circle at 100% 0, transparent .8rem, white .9rem), 
+                        radial-gradient(circle at 0 100%, transparent .8rem, white .9rem), 
+                        radial-gradient(circle at 100% 100%, transparent .8rem, white .9rem);
+    
+}
+
+.info-passageiro::after,
+.info-passageiro::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 91%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: thin;
+}
+
+.info-passageiro::before{
+    border-bottom: 1px dashed rgba(0,0,0,.32);
+    bottom:  0;
+}
+.info-passageiro::after{
+    border-top: 1px dashed rgba(0,0,0,.32);
+    top: 0;
 }
 
 .embarque{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 0 1.5rem 0;
+    position: relative;
+    padding: 1.7rem 0;
+    background: 
+            linear-gradient(0, transparent 0, transparent) top left, 
+            linear-gradient(0, transparent 0, transparent) top right;
+    background-size: 51% 100%;
+    background-repeat: no-repeat;
+    background-image:   
+            radial-gradient( circle at 0 0, transparent .8rem, white .9rem ), 
+            radial-gradient(circle at 100% 0, transparent .8rem, white .9rem)
 }
 
 .embarque-terminal-portao div{
-    margin-top: 1rem;
+    margin-top: .7rem;
+    margin-left: 1.7rem;
 }
 .embarque-terminal-portao p {
     margin-bottom: .2rem;
@@ -120,8 +183,29 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 1.5rem;
 }
+
+.atencao{
+    background-color: #fff;
+    padding-bottom: 1.7rem;
+    text-align: center;
+    border-radius: 0 0 24px 24px;
+}
+
 .card-content .duvidas{
     margin-top: 1.25em;
     text-align: center;
 } 
+
+
+
+@media (max-width: 769px){
+    .info-voo, .info-passageiro{
+        border-radius: 24px;
+        background: #ffff;
+    }
+    .embarque{
+        border-radius: 24px 24px 0 0;
+    }
+}
