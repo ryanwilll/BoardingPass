@@ -1,0 +1,127 @@
+body{
+    background: rgb(130,87,229);
+    background: linear-gradient(90deg, rgba(130,87,229,1) 0%, rgba(39,26,69,1) 100%);
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.small-text{
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+}
+.medium-text{
+    font-size: 16px;
+    font-weight: 500;
+}
+.medium-text-info{
+    font-size: 16px;
+
+}
+.big-text{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.btn{
+    background: #633BBC;
+    color: #FFFFFF;
+    padding: .3rem ;
+    width: 80%;
+    border-radius: 8px;
+    text-align: center;;
+    box-sizing: border-box;
+}
+
+.cor-gray{
+    color: #949393;
+}
+
+.align-left{
+    text-align: left;
+}
+.align-right{
+    text-align: right;
+}
+
+/* ================================================================= */
+.card-content{
+    position: absolute;
+    display: flex;
+    width: 330px;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ticket {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 1.5rem;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.info-voo{
+    display: flex;
+    flex-direction: column;
+}
+
+.voo-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.voo-data .data p:nth-child(1) {
+    display: flex;
+    justify-content: flex-end;
+}
+.origem-destino{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px dashed #808080;
+    margin: 1.5rem 0;
+    display: flex;
+    padding-bottom: 1.5rem;
+}
+
+.info-passageiro{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #808080;
+    padding: 0 0 1rem 0;
+}
+
+.embarque{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+.embarque-terminal-portao div{
+    margin-top: 1rem;
+}
+.embarque-terminal-portao p {
+    margin-bottom: .2rem;
+}
+
+.qr-code{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-content .duvidas{
+    margin-top: 1.25em;
+    text-align: center;
+} 
